@@ -33,6 +33,17 @@ Error toGrayScale(int *r, int *g, int *b, Mode mode) {
   return NO_ERROR;
 }
 
-int toSepia(int *r, int *g, int *b) {
+
   //TODO: implement
+  // this function for to check the condition for sepia
+int checkSepia(float value){
+  return (value < 255) ? value : 255;
 }
+// value passed by refrence to this function no need of return type 
+// Error write to return the ERROR VALUE
+Error toSepia(int *r, int *g, int *b){
+  if(r == NULL || g == NULL || b == NULL){
+    return ERROR_PRESENT;
+  }
+  
+
