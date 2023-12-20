@@ -1,12 +1,19 @@
 
 #ifndef MODE_H
 #define MODE_H
+#ifndef MODE_H
+#define MODE_H
 
 typedef enum {
   AVERAGE,
   LIGHTNESS,
   LUMINOSITY
 } Mode;
+/ assign value to my own data type using enumerator
+typedef enum {
+  NO_ERROR = 0,
+  ERROR_PRESENT,
+}Error;
 
 #endif /* MODE_H */
 
