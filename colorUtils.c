@@ -45,5 +45,17 @@ Error toSepia(int *r, int *g, int *b){
   if(r == NULL || g == NULL || b == NULL){
     return ERROR_PRESENT;
   }
-  
+   float red = *r, green = *g, blue = *b;
+  // sepia to red
+  *r = round(0.393 * red + 0.769 * green + 0.189 * blue);
+  *r = checkSepia(*r);
+  // sepia to green
+  *g = round(0.349 * red + 0.686 * green + 0.168 * blue);
+  *g = checkSepia(*g);
+  // sepia to blue
+  *b = round(0.272 * red + 0.534 * green + 0.131 * blue);
+  *b = checkSepia(*b);
+  return NO_ERROR;
+
+}
 
